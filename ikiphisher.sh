@@ -257,7 +257,7 @@ about() {
 		99)
 			msg_exit;;
 		0 | 00)
-			echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Wracanie do menu..."
+			echo -ne "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Powrót do menu..."
 			{ sleep 1; main_menu; };;
 		*)
 			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Nieznana opcja, wpisz jeszcze raz..."
